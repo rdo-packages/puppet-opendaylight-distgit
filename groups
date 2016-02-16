@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-d2a7ef86b34dddce9030a85932e8cd819900f78c	puppet-opendaylight-distgit-ptl
+# UUID          Group Name
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
+55e0c7d4a30260e73cf451258033d2c31e965f81       	puppet-opendaylight-distgit-core
+d2a7ef86b34dddce9030a85932e8cd819900f78c        	puppet-opendaylight-distgit-ptl
+global:Registered-Users		Registered Users
