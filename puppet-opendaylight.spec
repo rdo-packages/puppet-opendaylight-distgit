@@ -11,7 +11,7 @@ Source0:        https://github.com/dfarrell07/puppet-opendaylight/archive/%{vers
 BuildArch:      noarch
 
 Requires:       puppet-stdlib
-Requires:       puppet-archive
+#Requires:       puppet-archive
 Requires:       puppet-java
 Requires:       puppet >= 2.7.0
 
