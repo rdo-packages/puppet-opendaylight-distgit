@@ -1,5 +1,5 @@
 [gerrit]
-host=rpmfactory.beta.rdoproject.org
+host=review.rdoproject.org
 port=29418
-project=puppet-opendaylight-distgit
-defaultbranch=master
+project=puppet/puppet-opendaylight-distgit
+defaultbranch=rpm-master
