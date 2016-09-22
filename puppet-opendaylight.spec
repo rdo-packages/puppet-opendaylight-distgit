@@ -7,8 +7,8 @@
 
 
 Name:           puppet-opendaylight
-Version:        XXX
-Release:        XXX
+Version:        3.7.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module that installs and configures the OpenDaylight SDN controller
 License:        BSD-2-Clause
 
@@ -51,4 +51,7 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/opendaylight/
 
 
 %changelog
+* Thu Sep 22 2016 Haikel Guemar <hguemar@fedoraproject.org> - 3.7.0-1.b2d8d9d.git
+- Newton update 3.7.0 (b2d8d9dc3becdad8213ae51c4cda27c077dca71c)
+
 
