@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name puppet-opendaylight
-%global commit b2d8d9dc3becdad8213ae51c4cda27c077dca71c
+%global commit 726187652054ad46c7ff980f2fe9e56c9ad5b3b5
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-opendaylight
-Version:        XXX
-Release:        XXX
+Version:        3.7.0
+Release:        2%{?alphatag}%{?dist}
 Summary:        Puppet module that installs and configures the OpenDaylight SDN controller
 License:        BSD-2-Clause
 
@@ -51,4 +51,6 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/opendaylight/
 
 
 %changelog
+* Thu Feb 09 2017 Alfredo Moralejo <amoralej@redhat.com> 3.7.0-2.7261876git
+- Ocata update 3.7.0 (726187652054ad46c7ff980f2fe9e56c9ad5b3b5)
 
