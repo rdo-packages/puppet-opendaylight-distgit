@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name puppet-opendaylight
-%global commit b2d8d9dc3becdad8213ae51c4cda27c077dca71c
+%global commit d3b32a4d44b9d0f345d845790737714b10d76d05
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-opendaylight
-Version:        XXX
-Release:        XXX
+Version:        7.0.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module that installs and configures the OpenDaylight SDN controller
 License:        BSD-2-Clause
 
@@ -51,5 +51,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/opendaylight/
 
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 7.0.0-1.d3b32a4git
+- Update to post 7.0.0 (d3b32a4d44b9d0f345d845790737714b10d76d05)
+
 
 
