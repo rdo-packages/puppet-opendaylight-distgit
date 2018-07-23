@@ -4,7 +4,7 @@
 %else
 %define upstream_name integration-packaging-puppet-opendaylight
 %endif
-%global commit 38977efdb9d7a585a1748cf6122040776ed542f1
+%global commit 9126c8d5084820d61c7def8ce3a48f2eff4f4124
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
@@ -14,7 +14,7 @@
 
 
 Name:           puppet-opendaylight
-Version:        8.1.2
+Version:        8.2.2
 Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module that installs and configures the OpenDaylight SDN controller
 License:        BSD-2-Clause
@@ -22,8 +22,6 @@ License:        BSD-2-Clause
 URL:            https://github.com/opendaylight/%{upstream_name}
 
 Source0:        https://github.com/opendaylight/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
-
-# patches_base=38977efdb9d7a585a1748cf6122040776ed542f1
 
 BuildArch:      noarch
 
@@ -60,6 +58,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/opendaylight/
 
 
 %changelog
+* Mon Jul 23 2018 Jon Schlueter <jschluet@redhat.com> 8.2.2-1.4fef98fgit
+- Update to 8.2.2 (9126c8d5084820d61c7def8ce3a48f2eff4f4124)
+
 * Tue May 01 2018 Jon Schlueter <jschluet@redhat.com> 8.1.2-1.38977efgit
 - Update to 8.1.2 (38977efdb9d7a585a1748cf6122040776ed542f1)
 
