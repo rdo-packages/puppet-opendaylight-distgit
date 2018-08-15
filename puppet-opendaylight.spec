@@ -1,20 +1,24 @@
 %{!?upstream_version: %global upstream_version %{commit}}
+%if 0%{?dlrn}
 %define upstream_name puppet-opendaylight
-%global commit b2d8d9dc3becdad8213ae51c4cda27c077dca71c
+%else
+%define upstream_name integration-packaging-puppet-opendaylight
+%endif
+%global commit 8c1f7e5803bdb0998bc8184bbf71a07213da27e6
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-opendaylight
-Version:        XXX
-Release:        XXX
+Version:        8.3.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module that installs and configures the OpenDaylight SDN controller
 License:        BSD-2-Clause
 
-URL:            https://github.com/dfarrell07/puppet-opendaylight
+URL:            https://github.com/opendaylight/integration-packaging-puppet-opendaylight
 
-Source0:        https://github.com/dfarrell07/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
+Source0:        https://github.com/opendaylight/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
@@ -27,7 +31,7 @@ Requires:       puppet >= 2.7.0
 Puppet module that installs and configures the OpenDaylight SDN controller
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
@@ -51,5 +55,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/opendaylight/
 
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 8.3.0-1.8c1f7e5git
+- Update to post 8.3.0 (8c1f7e5803bdb0998bc8184bbf71a07213da27e6)
+
 
 
