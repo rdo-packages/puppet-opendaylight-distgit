@@ -1,5 +1,5 @@
 %{!?upstream_version: %global upstream_version %{commit}}
-%define upstream_name puppet-opendaylight
+%define upstream_name integration-packaging-puppet-opendaylight
 %global commit b2d8d9dc3becdad8213ae51c4cda27c077dca71c
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
@@ -12,9 +12,9 @@ Release:        XXX
 Summary:        Puppet module that installs and configures the OpenDaylight SDN controller
 License:        BSD-2-Clause
 
-URL:            https://github.com/dfarrell07/puppet-opendaylight
+URL:            https://github.com/opendaylight/integration-packaging-puppet-opendaylight
 
-Source0:        https://github.com/dfarrell07/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
+Source0:        https://github.com/opendaylight/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
